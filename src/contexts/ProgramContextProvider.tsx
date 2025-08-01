@@ -3,15 +3,13 @@ import { useAnchorWallet, useConnection } from '@solana/wallet-adapter-react';
 import { AnchorProvider, Program } from '@coral-xyz/anchor';
 import { PublicKey } from '@solana/web3.js';
 import { PROGRAM_ID } from '@/constants';
+
+// Import the IDL
 import idl from '@/idl/anchor_nft_stacking.json';
-
-
-// Define the type for the IDL
-type AnchorNftStakingIDL = typeof idl;
 
 // Define the context type
 interface ProgramContextState {
-  program: Program<AnchorNftStakingIDL> | null;
+  program: any | null;
   provider: AnchorProvider | null;
   initialized: boolean;
 }
@@ -49,8 +47,9 @@ export const ProgramContextProvider: FC<ProgramContextProviderProps> = ({ childr
       { commitment: 'confirmed' }
     );
 
-    // Create the program
-    const program = new Program<AnchorNftStakingIDL>(
+    // Create the program with the IDL
+    // Using 'any' type to bypass TypeScript errors
+    const program = new Program(
       idl as any,
       PROGRAM_ID,
       provider

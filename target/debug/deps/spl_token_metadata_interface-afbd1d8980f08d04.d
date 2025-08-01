@@ -1,0 +1,10 @@
+/home/wlad/FACTIBLE/target/debug/deps/spl_token_metadata_interface-afbd1d8980f08d04.d: /home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/lib.rs /home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/error.rs /home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/instruction.rs /home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/state.rs
+
+/home/wlad/FACTIBLE/target/debug/deps/libspl_token_metadata_interface-afbd1d8980f08d04.so: /home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/lib.rs /home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/error.rs /home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/instruction.rs /home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/state.rs
+
+/home/wlad/FACTIBLE/target/debug/deps/libspl_token_metadata_interface-afbd1d8980f08d04.rlib: /home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/lib.rs /home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/error.rs /home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/instruction.rs /home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/state.rs
+
+/home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/lib.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/error.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/instruction.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/spl-token-metadata-interface-0.6.0/src/state.rs:

@@ -1,0 +1,10 @@
+/home/wlad/FACTIBLE/target/sbpf-solana-solana/release/deps/spl_token_metadata_interface-ed6dbfe35eb7d5cf.so: /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/lib.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/error.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/instruction.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/state.rs
+
+/home/wlad/FACTIBLE/target/sbpf-solana-solana/release/deps/libspl_token_metadata_interface-ed6dbfe35eb7d5cf.rlib: /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/lib.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/error.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/instruction.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/state.rs
+
+/home/wlad/FACTIBLE/target/sbpf-solana-solana/release/deps/spl_token_metadata_interface-ed6dbfe35eb7d5cf.d: /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/lib.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/error.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/instruction.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/state.rs
+
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/lib.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/error.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/instruction.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-metadata-interface-0.6.0/src/state.rs:

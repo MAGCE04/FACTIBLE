@@ -1,0 +1,10 @@
+/home/wlad/FACTIBLE/target/sbpf-solana-solana/release/deps/spl_token_group_interface-2a11d933f026dec6.so: /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/lib.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/error.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/instruction.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/state.rs
+
+/home/wlad/FACTIBLE/target/sbpf-solana-solana/release/deps/libspl_token_group_interface-2a11d933f026dec6.rlib: /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/lib.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/error.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/instruction.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/state.rs
+
+/home/wlad/FACTIBLE/target/sbpf-solana-solana/release/deps/spl_token_group_interface-2a11d933f026dec6.d: /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/lib.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/error.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/instruction.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/state.rs
+
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/lib.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/error.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/instruction.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-group-interface-0.5.0/src/state.rs:

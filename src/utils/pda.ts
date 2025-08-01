@@ -1,23 +1,27 @@
 import { PublicKey } from '@solana/web3.js';
-import { PROGRAM_ID, CONFIG_SEED, USER_SEED, STAKE_SEED, REWARDS_SEED } from '@/constants';
-import { findProgramAddressSync } from '@coral-xyz/anchor/dist/cjs/utils/pubkey';
+import { PROGRAM_ID, CONFIG_SEED, USER_SEED, STAKE_SEED, REWARDS_SEED, TOKEN_METADATA_PROGRAM_ID } from '@/constants';
 import { 
   ASSOCIATED_TOKEN_PROGRAM_ID, 
   TOKEN_PROGRAM_ID, 
   getAssociatedTokenAddressSync 
 } from '@solana/spl-token';
-import { findMetadataPda, findMasterEditionPda } from '@metaplex-foundation/mpl-token-metadata';
-import { createUmi } from '@metaplex-foundation/umi-bundle-defaults';
-import { publicKey } from '@metaplex-foundation/umi';
 
-// Create a UMI instance for Metaplex operations
-const umi = createUmi('https://api.devnet.solana.com');
+/**
+ * Find a program address for the given seeds
+ */
+export const findProgramAddress = (
+  seeds: Buffer[],
+  programId: PublicKey
+): [PublicKey, number] => {
+  const [address, bump] = PublicKey.findProgramAddressSync(seeds, programId);
+  return [address, bump];
+};
 
 /**
  * Find the config account PDA
  */
 export const findConfigPda = (): [PublicKey, number] => {
-  return findProgramAddressSync(
+  return findProgramAddress(
     [Buffer.from(CONFIG_SEED)],
     PROGRAM_ID
   );
@@ -28,7 +32,7 @@ export const findConfigPda = (): [PublicKey, number] => {
  * @param wallet The user's wallet public key
  */
 export const findUserPda = (wallet: PublicKey): [PublicKey, number] => {
-  return findProgramAddressSync(
+  return findProgramAddress(
     [Buffer.from(USER_SEED), wallet.toBuffer()],
     PROGRAM_ID
   );
@@ -41,7 +45,7 @@ export const findUserPda = (wallet: PublicKey): [PublicKey, number] => {
 export const findStakePda = (mint: PublicKey): [PublicKey, number] => {
   const [config] = findConfigPda();
   
-  return findProgramAddressSync(
+  return findProgramAddress(
     [Buffer.from(STAKE_SEED), mint.toBuffer(), config.toBuffer()],
     PROGRAM_ID
   );
@@ -53,7 +57,7 @@ export const findStakePda = (mint: PublicKey): [PublicKey, number] => {
 export const findRewardsMintPda = (): [PublicKey, number] => {
   const [config] = findConfigPda();
   
-  return findProgramAddressSync(
+  return findProgramAddress(
     [Buffer.from(REWARDS_SEED), config.toBuffer()],
     PROGRAM_ID
   );
@@ -79,8 +83,14 @@ export const getAssociatedTokenAccount = (mint: PublicKey, owner: PublicKey): Pu
  * @param mint The NFT mint
  */
 export const findMetadataAccount = (mint: PublicKey): PublicKey => {
-  const metadataPda = findMetadataPda(umi, { mint: publicKey(mint.toString()) });
-  return new PublicKey(metadataPda[0]);
+  return PublicKey.findProgramAddressSync(
+    [
+      Buffer.from('metadata'),
+      TOKEN_METADATA_PROGRAM_ID.toBuffer(),
+      mint.toBuffer(),
+    ],
+    TOKEN_METADATA_PROGRAM_ID
+  )[0];
 };
 
 /**
@@ -88,6 +98,13 @@ export const findMetadataAccount = (mint: PublicKey): PublicKey => {
  * @param mint The NFT mint
  */
 export const findMasterEditionAccount = (mint: PublicKey): PublicKey => {
-  const editionPda = findMasterEditionPda(umi, { mint: publicKey(mint.toString()) });
-  return new PublicKey(editionPda[0]);
+  return PublicKey.findProgramAddressSync(
+    [
+      Buffer.from('metadata'),
+      TOKEN_METADATA_PROGRAM_ID.toBuffer(),
+      mint.toBuffer(),
+      Buffer.from('edition'),
+    ],
+    TOKEN_METADATA_PROGRAM_ID
+  )[0];
 };

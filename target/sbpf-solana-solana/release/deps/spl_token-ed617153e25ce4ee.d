@@ -1,0 +1,12 @@
+/home/wlad/FACTIBLE/target/sbpf-solana-solana/release/deps/spl_token-ed617153e25ce4ee.so: /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/lib.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/error.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/instruction.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/native_mint.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/processor.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/state.rs
+
+/home/wlad/FACTIBLE/target/sbpf-solana-solana/release/deps/libspl_token-ed617153e25ce4ee.rlib: /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/lib.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/error.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/instruction.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/native_mint.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/processor.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/state.rs
+
+/home/wlad/FACTIBLE/target/sbpf-solana-solana/release/deps/spl_token-ed617153e25ce4ee.d: /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/lib.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/error.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/instruction.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/native_mint.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/processor.rs /home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/state.rs
+
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/lib.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/error.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/instruction.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/native_mint.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/processor.rs:
+/home/wlad/.cargo/registry/src/index.crates.io-6f17d22bba15001f/spl-token-7.0.0/src/state.rs:
