@@ -5,6 +5,7 @@ import { PublicKey } from '@solana/web3.js';
 import { PROGRAM_ID } from '@/constants';
 import idl from '@/idl/anchor_nft_stacking.json';
 
+
 // Define the type for the IDL
 type AnchorNftStakingIDL = typeof idl;
 
