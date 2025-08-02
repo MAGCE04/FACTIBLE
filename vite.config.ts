@@ -8,31 +8,19 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
-      'process': 'process/browser',
-      'stream': 'stream-browserify',
-      'zlib': 'browserify-zlib',
-      'util': 'util',
     },
   },
-  // Configure Vite to handle .json files properly
-  assetsInclude: ['**/*.json'],
-  // Polyfills for Node.js modules that are used by some Solana libraries
-  define: {
-    'process.env': {},
-    'global': {},
+  // Add these to fix Node.js polyfill issues
+  optimizeDeps: {
+    esbuildOptions: {
+      define: {
+        global: 'globalThis',
+      },
+    },
   },
-  // Ensure the server is accessible from all network interfaces
-  server: {
-    host: true,
-    port: 3000,
-    strictPort: true,
-    open: true,
-  },
-  // Ensure the build is compatible with older browsers
   build: {
-    target: 'es2015',
-    outDir: 'dist',
-    assetsDir: 'assets',
-    sourcemap: true,
+    commonjsOptions: {
+      transformMixedEsModules: true,
+    },
   },
 })

@@ -1,47 +1,42 @@
-import { FC } from 'react';
-import { useClaimRewards, useUserAccount } from '@/hooks/useProgram';
+import { FC, useState } from 'react';
 
 const ClaimRewards: FC = () => {
-  const { userAccount, isLoading } = useUserAccount();
-  const { claimRewards, isClaiming } = useClaimRewards();
+  const [isClaiming, setIsClaiming] = useState(false);
+  const [points, setPoints] = useState(42); // Mock points value
 
   const handleClaim = async () => {
+    if (points === 0) return;
+    
     try {
-      await claimRewards();
+      setIsClaiming(true);
+      
+      // This is a placeholder for the actual claim rewards logic
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      alert(`Rewards claiming will be implemented here.\nPoints to claim: ${points}`);
+      
+      // Simulate successful claim by resetting points
+      setPoints(0);
+      
     } catch (error) {
       console.error('Error claiming rewards:', error);
+      alert('Error claiming rewards');
+    } finally {
+      setIsClaiming(false);
     }
   };
 
-  if (isLoading) {
-    return (
-      <div className="card mb-6">
-        <h2 className="text-xl font-bold mb-4">Claim Rewards</h2>
-        <p>Loading user data...</p>
-      </div>
-    );
-  }
-
-  if (!userAccount) {
-    return (
-      <div className="card mb-6">
-        <h2 className="text-xl font-bold mb-4">Claim Rewards</h2>
-        <p className="mb-4">Initialize your account to claim rewards.</p>
-      </div>
-    );
-  }
-
   return (
-    <div className="card mb-6">
+    <div className="bg-gray-800 p-6 rounded-lg mb-6">
       <h2 className="text-xl font-bold mb-4">Claim Rewards</h2>
       <div className="mb-4">
         <p className="text-gray-400">Available Points</p>
-        <p className="text-2xl font-bold">{userAccount.points}</p>
+        <p className="text-2xl font-bold">{points}</p>
       </div>
       <button
-        className="btn btn-primary w-full"
+        className="w-full bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md disabled:bg-gray-600 disabled:cursor-not-allowed"
         onClick={handleClaim}
-        disabled={isClaiming || userAccount.points === 0}
+        disabled={isClaiming || points === 0}
       >
         {isClaiming ? 'Claiming...' : 'Claim Rewards'}
       </button>

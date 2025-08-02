@@ -1,47 +1,29 @@
 import { FC } from 'react';
-import { useUserAccount, useInitializeUser } from '@/hooks/useProgram';
+import { useWallet } from '@solana/wallet-adapter-react';
 
 const UserStatus: FC = () => {
-  const { userAccount, isLoading } = useUserAccount();
-  const { initializeUser, isInitializing } = useInitializeUser();
-
-  if (isLoading) {
-    return (
-      <div className="card mb-6">
-        <h2 className="text-xl font-bold mb-4">User Status</h2>
-        <p>Loading user data...</p>
-      </div>
-    );
-  }
-
-  if (!userAccount) {
-    return (
-      <div className="card mb-6">
-        <h2 className="text-xl font-bold mb-4">User Status</h2>
-        <p className="mb-4">You need to initialize your user account to start staking.</p>
-        <button 
-          className="btn btn-primary"
-          onClick={initializeUser}
-          disabled={isInitializing}
-        >
-          {isInitializing ? 'Initializing...' : 'Initialize User Account'}
-        </button>
-      </div>
-    );
-  }
+  const { publicKey } = useWallet();
 
   return (
-    <div className="card mb-6">
+    <div className="bg-gray-800 p-6 rounded-lg mb-6">
       <h2 className="text-xl font-bold mb-4">User Status</h2>
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <p className="text-gray-400">Points</p>
-          <p className="text-2xl font-bold">{userAccount.points}</p>
+          <p className="text-gray-400">Account</p>
+          <p className="text-sm break-all">{publicKey?.toString() || 'Not connected'}</p>
         </div>
         <div>
-          <p className="text-gray-400">NFTs Staked</p>
-          <p className="text-2xl font-bold">{userAccount.amountStaked}</p>
+          <p className="text-gray-400">Status</p>
+          <p className="text-green-500">Connected</p>
         </div>
+      </div>
+      <div className="mt-4">
+        <button 
+          className="bg-purple-500 hover:bg-purple-600 text-white px-4 py-2 rounded-md"
+          onClick={() => alert('This will initialize your user account in the future')}
+        >
+          Initialize User Account
+        </button>
       </div>
     </div>
   );
